@@ -1,0 +1,142 @@
+[
+  {
+    "index": 0,
+    "area": "Oslo",
+    "tableCounter": 20,
+    "tableTotal": -220,
+    "tableAdjustment": -214
+  },
+  {
+    "index": 1,
+    "area": "Oslo",
+    "tableCounter": -2,
+    "tableTotal": -18,
+    "tableAdjustment": -265
+  },
+  {
+    "index": 2,
+    "area": "Oslo",
+    "tableCounter": -13,
+    "tableTotal": 8,
+    "tableAdjustment": -89
+  },
+  {
+    "index": 3,
+    "area": "Oslo",
+    "tableCounter": -8,
+    "tableTotal": -28,
+    "tableAdjustment": -258
+  },
+  {
+    "index": 4,
+    "area": "Oslo",
+    "tableCounter": 16,
+    "tableTotal": -76,
+    "tableAdjustment": -57
+  },
+  {
+    "index": 5,
+    "area": "Oslo",
+    "tableCounter": -4,
+    "tableTotal": -267,
+    "tableAdjustment": -32
+  },
+  {
+    "index": 6,
+    "area": "Oslo",
+    "tableCounter": 13,
+    "tableTotal": -146,
+    "tableAdjustment": -239
+  },
+  {
+    "index": 7,
+    "area": "Oslo",
+    "tableCounter": 20,
+    "tableTotal": -26,
+    "tableAdjustment": -299
+  },
+  {
+    "index": 8,
+    "area": "Oslo",
+    "tableCounter": -16,
+    "tableTotal": -259,
+    "tableAdjustment": -243
+  },
+  {
+    "index": 9,
+    "area": "Oslo",
+    "tableCounter": -9,
+    "tableTotal": -197,
+    "tableAdjustment": -218
+  },
+  {
+    "index": 10,
+    "area": "Bergen",
+    "tableCounter": -10,
+    "tableTotal": -229,
+    "tableAdjustment": -31
+  },
+  {
+    "index": 11,
+    "area": "Bergen",
+    "tableCounter": 10,
+    "tableTotal": -27,
+    "tableAdjustment": -160
+  },
+  {
+    "index": 12,
+    "area": "Bergen",
+    "tableCounter": -12,
+    "tableTotal": -87,
+    "tableAdjustment": -135
+  },
+  {
+    "index": 13,
+    "area": "Bergen",
+    "tableCounter": -4,
+    "tableTotal": -227,
+    "tableAdjustment": -100
+  },
+  {
+    "index": 14,
+    "area": "Bergen",
+    "tableCounter": 16,
+    "tableTotal": -273,
+    "tableAdjustment": -169
+  },
+  {
+    "index": 15,
+    "area": "Bergen",
+    "tableCounter": 9,
+    "tableTotal": -216,
+    "tableAdjustment": -59
+  },
+  {
+    "index": 16,
+    "area": "Bergen",
+    "tableCounter": -4,
+    "tableTotal": -151,
+    "tableAdjustment": -19
+  },
+  {
+    "index": 17,
+    "area": "Bergen",
+    "tableCounter": -15,
+    "tableTotal": -270,
+    "tableAdjustment": -89
+  },
+  {
+    "index": 18,
+    "area": "Bergen",
+    "tableCounter": 12,
+    "tableTotal": -125,
+    "tableAdjustment": -208
+  },
+  {
+    "index": 19,
+    "area": "Bergen",
+    "tableCounter": 2,
+    "tableTotal": -277,
+    "tableAdjustment": -30
+  }
+]
