@@ -1,22 +1,46 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/service/api.service';
-import { FormService } from 'src/app/service/form.service';
+import { FormGroup } from '@angular/forms';
+import { Observable, tap } from 'rxjs';
+import { TableFacade } from 'src/app/facade/table.facade.service';
+import { TableFormAreas } from 'src/app/service/form.service';
 
 @Component({
   selector: 'app-tables',
   templateUrl: './tables.component.html',
-  styleUrls: ['./tables.component.css'],
+  styleUrls: ['./tables.component.scss'],
 })
-export class TablesComponent implements OnInit {
+export class TablesComponent {
   constructor(
-    private apiService: ApiService,
-    private formService: FormService
-  ) {}
+    private tableFacade: TableFacade
+  ) { }
 
-  public myForm: FormGroup;
-  public tableForm$ = this.apiService.getTableData.pipe(
-    map((tableData) => this.formService.groupTables(tableData))
-  );
+  public tableForm = this.tableFacade.myForm;
+  public tableForm$: Observable<FormGroup<TableFormAreas>> = this.tableFacade.tableForm$;
 
-  ngOnInit() {}
+
+  // Hacky recursive loop from Stackoverflow
+  private getDirtyValues(form: any) {
+    let dirtyValues = {};
+
+    Object.keys(form.controls)
+        .forEach(key => {
+            const currentControl = form.controls[key];
+
+            if (currentControl.dirty) {
+                if (currentControl.controls)
+                    dirtyValues[key] = this.getDirtyValues(currentControl);
+                else
+                    dirtyValues[key] = currentControl.value;
+            }
+        });
+
+    return dirtyValues;
+  }
+
+  public submitTableForm() {
+    console.log('SUBMIT');
+    console.log(this.tableForm.controls);
+    console.log('CHANGES');
+    console.log(this.getDirtyValues(this.tableForm));
+  }
 }

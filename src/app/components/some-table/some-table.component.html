@@ -1,21 +1,40 @@
-<p>some-table works!</p>
-<!--
-<table border=1 [formGroup]="invoiceForm">
-  <thead>
-    <th>Id</th>
-    <th>Name</th>
-    <th>Action</th>
-  </thead>
-  <tbody formArrayName="Rows">
-    <tr *ngFor="let itemrow of invoiceForm.controls.Rows.controls; let i=index;let l=last"
-      [formGroupName]="i">
-      <td>{{i+1}}</td>
-      <td>
-        <input formControlName="name" class="form-control">
-      </td>
-      <td>
-        <button *ngIf="invoiceForm.controls.Rows.controls.length > 1" (click)="deleteRow(i)" class="btn btn-danger">Delete</button>
-      </td>
-    </tr>
-  </tbody>
--->
+
+  <div *ngFor="let area of tableForm.controls['areas'].controls; let areaIndex=index;">
+    <div [formGroupName]="areaIndex">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        {{area.controls.area.value}}
+                    </th>
+                    <th>
+                        Counter
+                    </th>
+                    <th>
+                        Total
+                    </th>
+                    <th>
+                        Adjustment
+                    </th>
+                </tr>
+            </thead>
+            <!--{{ area.controls.area.value }}-->
+            <tbody formArrayName="rows">
+                <tr *ngFor="let row of area.controls['rows'].controls; let rowIndex=index">
+                    <td [formGroupName]="rowIndex">
+                        <input formControlName="area" />
+                    </td>
+                    <td [formGroupName]="rowIndex">
+                        <input formControlName="tableCounter" />
+                    </td>
+                    <td [formGroupName]="rowIndex">
+                        <input formControlName="tableTotal" />
+                    </td>
+                    <td [formGroupName]="rowIndex">
+                        <input formControlName="tableAdjustment" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>

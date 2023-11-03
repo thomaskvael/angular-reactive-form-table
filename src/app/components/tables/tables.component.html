@@ -1,1 +1,57 @@
 <h1>Tables</h1>
+
+<div *ngIf="tableForm$ | async as tableForm" [formGroup]="tableForm">
+
+    <div formArrayName="areas">
+
+        <div *ngFor="let area of tableForm.controls['areas'].controls; let areaIndex=index;">
+            <div [formGroupName]="areaIndex">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                {{area.controls.area.value}}
+                            </th>
+                            <th>
+                                Counter
+                            </th>
+                            <th>
+                                Total
+                            </th>
+                            <th>
+                                Adjustment
+                            </th>
+                        </tr>
+                    </thead>
+                    <!--{{ area.controls.area.value }}-->
+                    <tbody formArrayName="rows">
+                        <tr *ngFor="let row of area.controls['rows'].controls; let rowIndex=index">
+                            <td [formGroupName]="rowIndex">
+                                <input formControlName="area" />
+                            </td>
+                            <td [formGroupName]="rowIndex">
+                                <input formControlName="tableCounter" />
+                            </td>
+                            <td [formGroupName]="rowIndex">
+                                <input formControlName="tableTotal" />
+                            </td>
+                            <td [formGroupName]="rowIndex">
+                                <input formControlName="tableAdjustment" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        
+    
+    </div>
+<!--<app-some-table [tableForm]="tableForm"></app-some-table>-->
+<!--<div *ngFor="let tableForm of tableForm$ | async">
+<p>Hmm</p>
+
+</div>-->
+
+</div>
+<button (click)="submitTableForm()">Submit</button>
